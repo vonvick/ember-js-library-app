@@ -8,7 +8,11 @@ export default Ember.Route.extend({
 
   actions: {
     saveContact(newContact) {
-      newContact.save().then(() => this.controller.set('responseMessage', true));
+      newContact.save()
+        .then(() => this.controller.set('responseMessage', true))
+        .catch((error) => {
+            console.log(error.errors)
+          });
     },
 
     willTransition() {
