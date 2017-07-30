@@ -15,3 +15,10 @@ main {
   color: #FFFFFF;
 }
 
+.library-item {
+  min-height: 150px;
+}
+
+html {
+  overflow-y: scroll;
+}
